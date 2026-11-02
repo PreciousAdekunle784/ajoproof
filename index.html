@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AjoProof · Your ajo, with proof</title>
+<meta name="description" content="AjoProof turns the paper ajo card into a record that can't disappear. Your alajo records each contribution, you get an SMS receipt on any phone, and the cash is banked daily with a licensed partner. Made in Abeokuta.">
+<!-- CHANGE: your live domain (canonical + og:url) -->
+<link rel="canonical" href="https://ajoproof.ng/">
+<meta name="theme-color" content="#1F2A5C">
+<meta name="color-scheme" content="light">
+
+<!-- Open Graph / social cards. CHANGE: og:url and og:image to your live domain. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AjoProof">
+<meta property="og:locale" content="en_NG">
+<meta property="og:title" content="AjoProof · Your ajo, with proof">
+<meta property="og:description" content="Every daily contribution recorded, receipted by SMS and banked with a licensed partner. Made in Abeokuta for alajos and the people who save with them.">
+<meta property="og:url" content="https://ajoproof.ng/">
+<meta property="og:image" content="https://ajoproof.ng/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A paper ajo card for Mama Bisi, Kuto Market, stamped PAID day by day, with an SMS receipt from AjoProof.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AjoProof · Your ajo, with proof">
+<meta name="twitter:description" content="Every daily contribution recorded, receipted by SMS and banked with a licensed partner. Made in Abeokuta.">
+<meta name="twitter:image" content="https://ajoproof.ng/og-image.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Fonts: Instrument Serif (display) and IBM Plex Mono (data) are self-hosted in /fonts (OFL).
+     Satoshi (body) comes from Fontshare; it loads without blocking first paint.
+     To self-host Satoshi too: download it from fontshare.com, put the .woff2 in /fonts,
+     uncomment the Satoshi @font-face in styles.css and delete the two Fontshare lines below. -->
+<link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap"></noscript>
+
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+<script defer src="main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AjoProof",
+  "url": "https://ajoproof.ng/",
+  "slogan": "Your ajo, with proof.",
+  "description": "Digital records, SMS receipts and daily banking for ajo thrift collectors (alajo) and their savers.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Abeokuta", "addressRegion": "Ogun State", "addressCountry": "NG" }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================================================
+     Shared SVG: ink filters, stamp shapes and the Adire motif tile.
+     Everything printed on the page is drawn from these.
+     ============================================================ -->
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Small stamps (31 boxes). Three seeds so no two boxes look identical. -->
+    <filter id="ink-s1" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="3" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="5" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.42" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -4 2.75" result="holes"/>
+      <feComposite in="rough" in2="holes" operator="in"/>
+    </filter>
+    <filter id="ink-s2" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="17" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="6" xChannelSelector="G" yChannelSelector="R" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.38" numOctaves="2" seed="29" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -4 2.65" result="holes"/>
+      <feComposite in="rough" in2="holes" operator="in"/>
+    </filter>
+    <filter id="ink-s3" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.11" numOctaves="2" seed="41" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="B" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.45" numOctaves="2" seed="7" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -4 2.85" result="holes"/>
+      <feComposite in="rough" in2="holes" operator="in"/>
+    </filter>
+    <!-- Large rubber stamps (status labels, COLLECTOR NOT FOUND, receipt PAID). -->
+    <filter id="ink-l" x="-10%" y="-20%" width="120%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="5" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="6" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.22" numOctaves="3" seed="23" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -4.2 2.8" result="holes"/>
+      <feComposite in="rough" in2="holes" operator="in"/>
+    </filter>
+    <!-- Small HTML stamps (status chips on small screens). -->
+    <filter id="ink-m" x="-10%" y="-20%" width="120%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="13" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="31" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3 2.3" result="holes"/>
+      <feComposite in="rough" in2="holes" operator="in"/>
+    </filter>
+    <!-- Hand-painted wobble for the Adire resist lines. -->
+    <filter id="resist" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="9" result="w"/>
+      <feDisplacementMap in="SourceGraphic" in2="w" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- The PAID stamp used in every box. Colour comes from CSS (currentColor). -->
+    <symbol id="s-paid" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="43" fill="none" stroke="currentColor" stroke-width="6"/>
+      <circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <text x="50" y="59.5" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-weight="700" font-size="25" letter-spacing="0.5" fill="currentColor">PAID</text>
+      <circle cx="50" cy="24" r="2.6" fill="currentColor"/>
+      <circle cx="50" cy="76" r="2.6" fill="currentColor"/>
+    </symbol>
+
+    <!-- Adire eleko panel strip: oniko circles, olokun waves, quartered square, ewe leaf.
+         Paper-coloured "resist" lines on indigo. Used ONLY in dividers, the final CTA border and the footer. -->
+    <pattern id="adire" width="168" height="42" patternUnits="userSpaceOnUse">
+      <rect width="168" height="42" fill="#1F2A5C"/>
+      <g fill="none" stroke="#F3EEE3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 1.5H168M0 40.5H168M42 1.5V40.5M84 1.5V40.5M126 1.5V40.5M0 1.5V40.5" stroke-width="1.1"/>
+        <circle cx="21" cy="21" r="13"/>
+        <circle cx="21" cy="21" r="7.5"/>
+        <path d="M21 4.5v3M21 34.5v3M4.5 21h3M34.5 21h3"/>
+        <path d="M47 13q4.5-5 9 0t9 0 9 0 5 0M47 21q4.5-5 9 0t9 0 9 0 5 0M47 29q4.5-5 9 0t9 0 9 0 5 0"/>
+        <path d="M93 9h24v24H93zM93 9l24 24M117 9L93 33"/>
+        <path d="M147 6c9 6.5 9 23.5 0 30c-9-6.5-9-23.5 0-30zM147 9v25M147 15l-4-3.5M147 15l4-3.5M147 21.5l-5-3.5M147 21.5l5-3.5M147 28l-4-3M147 28l4-3"/>
+      </g>
+      <g fill="#F3EEE3">
+        <circle cx="21" cy="21" r="2.2"/>
+        <circle cx="105" cy="14.5" r="1.6"/><circle cx="111.5" cy="21" r="1.6"/><circle cx="105" cy="27.5" r="1.6"/><circle cx="98.5" cy="21" r="1.6"/>
+        <circle cx="10" cy="10" r="1.1"/><circle cx="32" cy="10" r="1.1"/><circle cx="10" cy="32" r="1.1"/><circle cx="32" cy="32" r="1.1"/>
+        <circle cx="133" cy="8" r="1.1"/><circle cx="161" cy="8" r="1.1"/><circle cx="133" cy="34" r="1.1"/><circle cx="161" cy="34" r="1.1"/>
+      </g>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="masthead wrap">
+  <a class="wordmark" href="/" aria-label="AjoProof home">
+    <svg class="wordmark__box" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 12.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>AjoProof</span>
+  </a>
+  <span class="masthead__place mono">Abeokuta · Ogun State</span>
+  <nav class="masthead__nav" aria-label="Sections">
+    <a href="#how">How it works</a>
+    <a href="#try">Try it</a>
+    <a href="#terms">Trust</a>
+    <a href="#faq">Questions</a>
+  </nav>
+  <!-- URL comes from CONFIG.urls in main.js; href is the no-JS fallback. -->
+  <a class="btn btn--ink btn--small" data-url="collectorSignup" href="/app/signup?role=collector">Start as a collector</a>
+</header>
+
+<main id="main">
+
+<!-- ============================== 01 HERO ============================== -->
+<section class="hero wrap" aria-labelledby="hero-title">
+  <p class="label hero__label"><span class="label__n">01</span> / E kaabo</p>
+
+  <h1 class="hero__title" id="hero-title">Your ajo, <span class="hero__break">with <span class="proof">proof<svg class="proof__line" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M5 17.5C48 11 112 8.5 176 10.5c43 1.4 84 4.6 117-2.6"/><path pathLength="1" d="M38 24c62-6 140-7.4 214-3.4"/></svg></span>.</span></h1>
+
+  <div class="hero__copy">
+    <p class="lede">Your alajo records what you pay, every day. You get an SMS receipt in seconds, the cash is in the bank by evening, and every stamp adds to a savings history a lender can trust.</p>
+    <div class="ctas">
+      <a class="btn btn--ink" data-url="collectorSignup" href="/app/signup?role=collector">Start as a collector</a>
+      <a class="btn btn--line" data-url="saverSignup" href="/app/signup?role=saver">I save with an alajo</a>
+    </div>
+    <p class="hero__fine mono">No smartphone needed · Funds held by a licensed partner</p>
+  </div>
+
+  <div class="hero__stage">
+    <p class="hero__hint mono" id="card-hint">Tap an empty box to stamp it</p>
+    <!-- The living ajo card. Days 1–23 stamp on load; 24–31 are left for the visitor. -->
+    <div class="ajo-card ajo-card--hero" data-card="hero" role="group" aria-label="Ajo card for Mama Bisi, Kuto Market, October 2026" aria-describedby="card-hint">
+      <div class="ajo-card__head">
+        <p class="ajo-card__issuer">Alhaja Kudi Daily Contribution</p>
+        <p class="ajo-card__where mono">Kuto Market · Abeokuta</p>
+        <p class="ajo-card__no mono">No. <b>0412</b></p>
+      </div>
+      <div class="ajo-card__fields">
+        <p class="field field--name"><span class="field__k">Name</span><span class="field__v"><svg class="hand hand--name" viewBox="0 0 295.3 26.6" aria-hidden="true"><path pathLength="1" d="M5.1 9.3 2.9 8.3 2 6.3 2.4 5.4 3.3 3.2 5.4 2.4 6.8 2 8.8 3.5 9.4 5.3 8.9 7 7.5 12.1 5.8 16.2 2.9 23.3 M6 16.5 10 8.4 12.5 4.4 13.6 3.1 16 2.5 16.9 2.4 18.5 3.1 19.3 5 19.3 7.2 17.7 12.2 16.3 16.5 12.9 23.2 M16.3 16.3 20.3 8.2 22.3 4.3 23.8 3.1 25.5 2.2 27 2.4 28.4 3.1 29.2 5 29.4 7.1 27.6 12.3 24.6 19.5 24.2 22.4 25 23.3 26.1 23.2 28.6 22.5 29.4 21.6 31.7 18.3 M37.9 17.2 36.7 15.6 34.9 14.3 32.8 14.2 31.1 15.3 30 16.3 28.7 18.6 28.5 20.3 29.5 22 30.9 23.4 33.2 23 34.9 22.3 36.5 20.1 39.1 14.7 37.4 19.2 36.8 21.9 38.1 23 38.9 23 41 22.2 41.8 21 44.4 18.1 M42.4 18.5 45 15.4 46.7 14.4 47.8 15.3 47.5 16.5 46.2 20.5 44.7 24 M46.5 20.8 47.6 18.7 49.7 15.3 51.8 14.7 54.3 14.8 54.8 15.6 54.9 16.7 53.3 20.9 51.8 23.8 M53.5 20.9 54.8 18.7 57.3 15.8 59.2 14.6 61.6 14.7 62.2 15.7 62.2 17.6 60.7 20.6 60.4 22.8 61 23.8 62.6 24 64.6 22.7 65.7 21.7 68 18.8 M73.9 17.6 72.9 15.8 71.3 14.8 69.6 14.6 67 15.6 66.3 16.5 64.9 18.8 64.9 20.5 65.8 22.3 67.4 23.2 69.2 23.6 71.5 22.6 72.4 20.5 75 14.5 73.6 19.7 73.4 22.5 74.3 23.3 74.9 23.4 77 22.3 78.1 21.5 80.4 18.5 M101.4 4.6 102.6 5.4 102.4 8.3 100.5 12.6 99 15.9 97.9 17.6 95.3 21 93.3 23 91.2 24.2 90.3 24.1 89 23 89.4 19.6 91.2 14.9 92.4 11.5 93.8 9.7 96.3 6.6 98.7 4.4 100.9 3.6 103.8 2.6 107.2 2.2 109 3.5 110 5.4 109.6 7.7 108.4 9.8 107.1 10.7 104.8 11.8 101.9 12.8 M100.8 12.5 101.9 12.9 105 13.7 105.8 14.6 106.6 17 105.9 19.6 104.7 22 103.7 23 101.1 24.2 98.1 24.2 96.2 22.9 95.7 20.7 M111.8 9.8 111.8 10.7 112.8 10.4 112.5 9.7 111.5 9.8 M107.6 18.8 110.2 14.8 107.2 20.8 107.2 23.1 107.8 24.1 109.2 23.9 111.1 22.7 112.2 21.9 114.7 18.6 M114.4 18.8 116.5 15.9 117.5 13.8 117.5 16 119.4 18.6 119.9 20.5 119.6 22.9 117.8 23.7 M113.6 22.5 115.7 23.9 119.4 23.8 121.4 22.5 122.6 21.8 125 18.6 M128 9.3 127.9 10.2 129.1 10.3 129.2 9.3 128.2 9.1 M123.9 18.6 126.7 14.4 124 20.6 123.8 22.4 124.6 23.7 125.7 23.5 127.5 22.8 128.6 21.8 131.4 18.3 M134.7 19.7 133.8 20.7 132.8 19.5 134.2 18.3 134.8 19.6 134.9 21.7 132.3 23.4 M152.7 9.4 151.2 8.5 150.2 6.3 150.4 5.7 152 3.8 153.6 2.4 155 2.6 156.7 3.5 157.3 5.5 157 7.5 155.4 11.4 153.2 17 150.6 21.1 148.4 22.8 146.3 22.9 145.4 22.2 146 20.2 M170.1 5.6 170.1 3.6 169.3 2.9 168.5 2.5 166.5 3.7 164.2 5.7 161.7 8.6 159.8 10.5 157.7 11.5 155.6 11.4 M157.3 11.2 158.3 13 157.4 20.1 158.3 21.8 159.3 23 160 23 162.2 22 163.1 21.3 165.6 18.2 M166.2 18.6 168.4 14.6 165.6 20.3 165.6 22.1 166.4 23.5 168.5 23.3 170.7 22.4 172.9 20.5 175.1 17.3 M176.3 14.8 173.3 20.7 173.2 22.3 174 23.3 175.2 23.1 177.5 22.3 178.3 21.4 180.5 18.4 M179.2 18.5 181.2 15.6 183.6 11.6 M188 2.9 180.1 20.7 179.4 22.8 180.7 23.3 182.7 23.5 184.5 22.8 185.5 21.6 188.2 18.8 M181 11.1 188.1 10.8 M192.9 14.6 191.1 14.6 189 15.9 187.9 16.7 186.7 18.8 186.6 20.8 187.4 23 189.2 23.6 190.8 24 193.3 22.9 194.2 21.7 195.6 19.8 195.8 17.9 195.1 15.6 193 15.1 192.2 16 191.5 17.6 192.4 19.8 194.4 20.6 197.4 20.6 199.3 19.9 200.6 18.9 M212.6 9.7 211 8.9 210.2 6.6 210.2 5.6 211.7 3.7 213.7 3 214.6 2.7 216.8 4 217.4 5.7 216.9 8 215.3 12.7 214 17.1 211.2 24.2 M214.1 16.8 217.9 9 220.4 4.6 221.9 3.8 223.8 2.5 224.9 2.8 226.8 3.5 227.8 5.8 227.7 8.1 226 12.9 224.4 17 221.2 24.2 M224.5 17.3 228.2 8.8 230.8 4.7 232 3.7 234 2.7 235.4 2.7 237.3 3.8 237.8 5.9 237.9 7.7 235.8 13 233.2 20.2 233 23.3 233.8 24 234.7 24.4 236.6 23 238.2 22.4 240.2 19.2 M245.7 18.1 245.3 16.3 243.4 15.2 241.1 15.5 239.1 16.3 237.9 17.4 236.8 19.5 236.4 21.5 237.3 23.5 239.3 24.5 241.3 24.6 243.3 23.4 244.6 21.5 247.2 15.2 245.4 20.4 245.5 23.3 246 24.2 247.1 24.2 249.6 23.1 250.3 22.1 252.9 19.4 M251 19.1 253 15.6 254.3 13.7 254.1 16 257.3 15.7 258 16.7 257.7 19 256.4 21.9 256.6 22.8 257.2 24 258.5 23.7 260.4 23.1 261.5 21.7 263.6 19.1 M262.7 18.6 265.4 15.8 268.6 10.5 269.9 8.7 271.5 5.8 271.6 3.5 270.5 2.6 268.4 3.9 267.3 5.8 266.1 9.6 264.1 15.6 262.3 23.5 M262.3 24 263.7 20.5 264.6 18.9 266.9 15.7 269.2 15 271.3 14.9 272 15.9 271.8 18 269.5 18.9 266.6 18.8 M266.8 18.6 268.8 19.7 269.2 22.5 270 23.8 271.3 23.7 273.4 22.5 274.3 21.7 277 18.9 M276.2 21.1 278.2 20.2 279 19.5 280.7 17.1 280.8 15.2 279.8 14.3 278.8 14.2 276.7 15.4 275.4 17.1 275.3 20.2 276.2 22.3 277.9 23.1 280 23 281.7 22 283.1 21.4 285.2 18.2 M284.4 18.1 286.6 15.3 289 11.7 M293.1 2.8 285.3 20.3 285.2 22.1 285.8 23 287.5 23 290 22.4 291.1 21.3 293.3 18 M286.3 10.4 293.3 10.3"/></svg><span class="sr-only">Mama Bisi, Kuto Market</span></span></p>
+        <p class="field"><span class="field__k">Daily</span><span class="field__v mono">₦1,000</span></p>
+        <p class="field"><span class="field__k">Month</span><span class="field__v mono">OCT 2026</span></p>
+      </div>
+      <ol class="ajo-grid" aria-label="Days of the month">
+        <li><button type="button" class="box" data-day="1" aria-pressed="false" aria-label="Day 1, not stamped"><span class="box__n">1</span></button></li>
+        <li><button type="button" class="box" data-day="2" aria-pressed="false" aria-label="Day 2, not stamped"><span class="box__n">2</span></button></li>
+        <li><button type="button" class="box" data-day="3" aria-pressed="false" aria-label="Day 3, not stamped"><span class="box__n">3</span></button></li>
+        <li><button type="button" class="box" data-day="4" aria-pressed="false" aria-label="Day 4, not stamped"><span class="box__n">4</span></button></li>
+        <li><button type="button" class="box" data-day="5" aria-pressed="false" aria-label="Day 5, not stamped"><span class="box__n">5</span></button></li>
+        <li><button type="button" class="box" data-day="6" aria-pressed="false" aria-label="Day 6, not stamped"><span class="box__n">6</span></button></li>
+        <li><button type="button" class="box" data-day="7" aria-pressed="false" aria-label="Day 7, not stamped"><span class="box__n">7</span></button></li>
+        <li><button type="button" class="box" data-day="8" aria-pressed="false" aria-label="Day 8, not stamped"><span class="box__n">8</span></button></li>
+        <li><button type="button" class="box" data-day="9" aria-pressed="false" aria-label="Day 9, not stamped"><span class="box__n">9</span></button></li>
+        <li><button type="button" class="box" data-day="10" aria-pressed="false" aria-label="Day 10, not stamped"><span class="box__n">10</span></button></li>
+        <li><button type="button" class="box" data-day="11" aria-pressed="false" aria-label="Day 11, not stamped"><span class="box__n">11</span></button></li>
+        <li><button type="button" class="box" data-day="12" aria-pressed="false" aria-label="Day 12, not stamped"><span class="box__n">12</span></button></li>
+        <li><button type="button" class="box" data-day="13" aria-pressed="false" aria-label="Day 13, not stamped"><span class="box__n">13</span></button></li>
+        <li><button type="button" class="box" data-day="14" aria-pressed="false" aria-label="Day 14, not stamped"><span class="box__n">14</span></button></li>
+        <li><button type="button" class="box" data-day="15" aria-pressed="false" aria-label="Day 15, not stamped"><span class="box__n">15</span></button></li>
+        <li><button type="button" class="box" data-day="16" aria-pressed="false" aria-label="Day 16, not stamped"><span class="box__n">16</span></button></li>
+        <li><button type="button" class="box" data-day="17" aria-pressed="false" aria-label="Day 17, not stamped"><span class="box__n">17</span></button></li>
+        <li><button type="button" class="box" data-day="18" aria-pressed="false" aria-label="Day 18, not stamped"><span class="box__n">18</span></button></li>
+        <li><button type="button" class="box" data-day="19" aria-pressed="false" aria-label="Day 19, not stamped"><span class="box__n">19</span></button></li>
+        <li><button type="button" class="box" data-day="20" aria-pressed="false" aria-label="Day 20, not stamped"><span class="box__n">20</span></button></li>
+        <li><button type="button" class="box" data-day="21" aria-pressed="false" aria-label="Day 21, not stamped"><span class="box__n">21</span></button></li>
+        <li><button type="button" class="box" data-day="22" aria-pressed="false" aria-label="Day 22, not stamped"><span class="box__n">22</span></button></li>
+        <li><button type="button" class="box" data-day="23" aria-pressed="false" aria-label="Day 23, not stamped"><span class="box__n">23</span></button></li>
+        <li><button type="button" class="box" data-day="24" aria-pressed="false" aria-label="Day 24, not stamped"><span class="box__n">24</span></button></li>
+        <li><button type="button" class="box" data-day="25" aria-pressed="false" aria-label="Day 25, not stamped"><span class="box__n">25</span></button></li>
+        <li><button type="button" class="box" data-day="26" aria-pressed="false" aria-label="Day 26, not stamped"><span class="box__n">26</span></button></li>
+        <li><button type="button" class="box" data-day="27" aria-pressed="false" aria-label="Day 27, not stamped"><span class="box__n">27</span></button></li>
+        <li><button type="button" class="box" data-day="28" aria-pressed="false" aria-label="Day 28, not stamped"><span class="box__n">28</span></button></li>
+        <li><button type="button" class="box" data-day="29" aria-pressed="false" aria-label="Day 29, not stamped"><span class="box__n">29</span></button></li>
+        <li><button type="button" class="box" data-day="30" aria-pressed="false" aria-label="Day 30, not stamped"><span class="box__n">30</span></button></li>
+        <li><button type="button" class="box" data-day="31" aria-pressed="false" aria-label="Day 31, not stamped"><span class="box__n">31</span></button></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+      </ol>
+      <div class="ajo-card__foot">
+        <p><span class="field__k">Collector's sign</span><svg class="hand hand--sign" viewBox="0 0 88.2 26.3" aria-hidden="true"><path pathLength="1" d="M9 9.4 7 8.6 6.8 6.9 6.8 5.6 7.9 3.7 9.7 2.6 10.7 3.1 12.9 4 13.6 5.6 13.1 7.7 11.9 11.7 9.3 17.1 6.8 21.3 4.5 23 2.6 22.9 2 22.4 2 20.1 M26.2 5.8 26.4 4 25.4 2.8 24.5 2.8 22.2 3.7 20.4 5.5 17.7 8.7 15.6 10.6 13.7 11.4 12 11.4 M13.6 11.4 14.5 13.3 13.5 20.4 14.2 22.2 15.4 22.9 15.9 23 18.4 22.3 19.2 21.1 21.4 18.3 M21.9 18.9 24.5 14.3 21.3 21.1 21.3 22.8 22.3 24 24.3 23.8 26.1 22.8 28.4 20.7 31.3 17.6 M32.2 14.4 29.5 21 29.3 22.8 30.1 24.2 31.3 23.7 33.3 22.6 34.5 21.9 36.9 18.5 M44.8 17.5 44.3 15.4 42.5 14.4 40 14.3 37.7 15.4 36.6 16.7 35.7 18.5 35 20.5 35.9 22.5 37.8 24 39.9 23.5 42.5 22.7 43.8 20.6 52.3 2 M46.6 14.5 44.7 19.4 44.2 22.9 45.5 24 46.2 23.8 48.7 22.8 49.9 21.7 52.2 18.7 M54.1 9.9 54.5 10.7 55 10.8 55.2 9.9 54.5 9.3 M50 19 52.7 14.9 50.1 20.8 49.4 23.3 50.3 24.3 51.4 24.3 53.9 23.3 55 22.2 57.2 19 M63.6 23.9 65.9 23 69.2 19.8 72.4 16.3 77.2 9.1 80.9 3.8 78.1 23.8 77.6 21.1 76 17.9 74.4 16.4 71.6 14 69.9 14.4 68.8 15.1 68.8 17.2 69 19.2 70.8 20.8 73.8 22.8 76.6 23.6 81.4 23.6 M85.4 19.3 84.4 19.8 85 21.1 86.2 20.2 85.3 18.9"/></svg></p>
+        <p class="mono">Receipted by SMS · AjoProof</p>
+      </div>
+    </div>
+
+    <!-- SMS receipt slip. Text is filled by main.js; this is the no-JS version.
+         SMS uses NGN and plain letters because GSM text can't carry ₦ or Yoruba tone marks,
+         exactly like a real bank alert. -->
+    <div class="sms" id="hero-sms" aria-live="polite" aria-atomic="true">
+      <div class="sms__inner mono">
+        <p class="sms__meta"><span>From: AjoProof</span><span data-sms="time">07:42</span></p>
+        <p class="sms__meta"><span>To: 0803 XXX XXXX</span><span data-sms="date">23 OCT</span></p>
+        <p class="sms__body" data-sms="body">Mama Bisi, we received NGN1,000.00 for DAY 23/31. Card total: NGN23,000.00. Collector: Alhaja Kudi, Kuto. Ref AJP-0412-023. Owo re wa lailewu.</p>
+      </div>
+    </div>
+
+    <p class="margin-note margin-note--hero mono" aria-hidden="true">₦1,000 × 31 DAYS<br>= ₦31,000.00</p>
+  </div>
+</section>
+
+<!-- ============================== 02 THE PROBLEM ============================== -->
+<section class="problem wrap" id="problem" aria-labelledby="problem-title">
+  <div class="sec-rule"><p class="label"><span class="label__n">02</span> / The problem</p><p class="sec-rule__aside mono">Lafenwa · September 2026</p></div>
+
+  <h2 class="problem__title" id="problem-title">She paid <span class="mono num">₦1,000</span> every day for six months. Then the collector vanished.</h2>
+
+  <figure class="problem__card" aria-label="A torn paper ajo card, half stamped, marked collector not found">
+    <div class="torn">
+      <div class="ajo-card ajo-card--torn" data-card="torn" aria-hidden="true" style="clip-path: polygon(0% 0%, 100% 0%, 100.0% 52.0%, 97.5% 52.3%, 96.6% 53.5%, 94.3% 55.8%, 90.8% 57.7%, 88.8% 58.8%, 87.0% 59.2%, 86.2% 62.9%, 83.3% 62.4%, 82.9% 66.1%, 80.8% 65.8%, 80.2% 66.1%, 77.9% 68.3%, 73.6% 69.1%, 72.2% 72.8%, 69.9% 73.4%, 69.4% 74.2%, 67.2% 74.6%, 63.6% 76.5%, 63.7% 78.6%, 60.6% 80.5%, 59.1% 81.0%, 58.2% 83.7%, 54.5% 84.7%, 53.5% 87.1%, 52.2% 86.6%, 51.1% 87.5%, 47.3% 90.9%, 44.5% 91.5%, 42.2% 93.5%, 42.6% 94.6%, 41.0% 95.2%, 38.5% 97.5%, 36.2% 98.4%, 34.0% 100.0%, 0% 100%)">
+        <div class="ajo-card__head">
+          <p class="ajo-card__issuer">Divine Favour Thrift &amp; Ajo</p>
+          <p class="ajo-card__where mono">Lafenwa · Abeokuta</p>
+          <p class="ajo-card__no mono">No. <b>1187</b></p>
+        </div>
+        <div class="ajo-card__fields">
+          <p class="field field--name"><span class="field__k">Name</span><span class="field__v"><svg class="hand hand--name" viewBox="0 0 212 37.8" aria-hidden="true"><path pathLength="1" d="M15.4 18.5 13.3 16.6 12 13.4 11.1 11.2 10.1 8.3 10.8 5.1 12.2 3.1 13 2 15.5 2.4 16.3 3.3 16.6 5.2 16.5 8.1 15.1 13.3 12 18.7 10.8 20.8 8.7 22.6 6.5 23.6 4.3 23.3 2.8 22.4 2 20.4 2.3 18.7 3.4 17.6 5.3 17.6 7 18.5 M17 18.3 19.3 14.1 16.5 20.6 16.2 22.2 17 23.6 19.5 23.5 21.5 22.5 23.9 20.2 26.3 17.3 M27.7 14 19 32.7 18.1 34.8 15.8 35.8 14.6 34.6 15.2 32.9 16.4 29.8 20 26.8 23.5 24.5 25.7 23.7 28.9 21.6 32.3 18.2 M39.1 17.6 38.7 15.5 36.9 14.3 34.7 14.4 32.7 15.3 31.4 16.4 30.7 18.7 30.3 20.3 30.8 22.5 32.8 23.4 34.4 23.1 37 22.5 38.2 20.4 40.6 14.6 39.3 19.3 38.7 22.2 39.7 23 40.7 23.5 42.3 22.3 43.8 21.5 46 18.3 M66.1 4.9 67 6.1 66.9 8.5 65.4 12.5 64.1 15.4 62.7 17.3 60.5 20.5 58.5 22 56.5 23.5 55.6 23.4 54.3 22.3 54.7 19.5 56.3 14.7 57.6 11.8 58.9 9.5 61.2 6.7 63.7 4.8 65.5 3.9 68.8 2.7 72.4 3 74.3 4.2 74.9 5 75.8 6.9 75.2 9.9 74.5 11.6 73 12.9 70.9 13.4 68 13.8 65.6 12.6 66.3 13.3 67.1 15.5 66.4 20.3 67.1 22.1 68.7 23.2 70.9 22.4 72.3 21.5 74.4 18.3 M78.1 9.3 77.7 10.5 78.8 10.7 79 9.6 78 9.6 M73.9 18.7 76.3 14.4 73.7 20.5 73.3 22.8 74.4 23.9 74.8 23.5 77.1 22.6 78.2 21.6 80.5 18.5 M80.1 19 82.8 15.6 83.8 13.8 83.7 15.6 85.5 18.7 85.9 20.9 85.6 22.8 83.5 23.8 M79.7 22.7 81.9 23.7 85.6 23.8 87.7 22.6 88.8 21.6 91.1 19 M94 9.6 93.7 10.6 94.8 11 94.7 9.6 93.9 9.6 M89.5 19.2 92.4 15 89.2 21.4 89.3 23.3 89.8 24.2 91 24.4 93.1 23.5 94.6 22.5 97.1 18.9 M101.3 20 99.9 20.6 99.3 19.9 100.4 18.8 101.4 19.7 100.8 21.8 98.5 24 M115.7 14.2 117.6 14.4 121.9 13.5 124.8 11.3 127.4 9.6 128.3 7.7 128.9 4.7 127.8 2.9 125.9 2.5 124.9 3.7 123.8 5.5 122.3 10.5 120.4 15.6 119.5 18.6 118.2 20.1 116.1 22.5 113.9 23.4 112.2 23.2 111.3 22.5 111.4 20 112.3 19.4 114.4 19.5 116.2 20.1 119.1 22.3 121.9 23.1 123.9 23.2 126.8 22.4 129 20.2 M136.7 17.5 135.8 15.1 133.8 14.3 132.2 14.1 130.1 15.2 128.7 16.5 127.8 18.5 127.5 20 128.1 22.1 130.2 23.3 132.2 23.2 134 22.1 135.2 20.2 137.8 14.4 136.4 19 136.2 22.2 137.1 23.3 138 23.4 139.9 22.1 140.8 21.3 143.4 18.3 M142.2 18.2 146.6 12.9 148.8 10.4 150.1 8.2 151.4 5.3 151.7 3.4 151 2.5 148.7 3.2 147.7 5.4 144.9 12.9 140.9 22.1 136.7 28.6 135.6 31.5 135.5 33.5 136.3 34.5 138.1 33.5 139.6 30.8 141.5 22 142.4 23 144.4 22.7 146.3 21.7 147.7 20.9 149.7 18.2 M149.9 20.7 152 20 153.1 18.8 154.5 16.6 154.6 14.8 153.8 13.6 152.8 13.5 150.8 14.4 149.4 16.7 148.8 19.8 149.8 21.6 151.6 22.6 153.9 22.7 155.7 21.6 156.7 20.6 159.2 17.8 M158.6 17.1 160.8 14.5 162.8 13.5 163.8 14.1 163.5 15.4 162 19 161 22.3 M162.3 19.3 163.2 17.2 165.6 14.6 167.7 13.6 169.5 13.4 170.8 14.5 170.4 16.1 169.3 19 169.1 21.3 169.8 22.1 170.4 22 172.8 21.2 173.7 20.3 175.8 17.2 M177.6 13 175 15.1 173.8 18.3 173.3 20.3 174.5 22.4 176.4 22.5 178.5 21.5 180.7 19.2 M183.6 13.1 180.7 19.2 180.8 21.4 181.3 22.2 183.3 22.7 185.6 21.5 187.8 19.5 189.3 16.4 189.7 13.2 M189.6 13.3 190.4 17.4 191.1 18.3 193.4 18.6 195.2 17.4 M203 16.4 202.2 14.3 200 13.7 197.8 13.3 195.8 14.3 194.5 15.6 193.4 17.7 193.2 19.8 194.1 21.9 196.1 22.7 198 22.7 200.3 21.8 201.3 19.7 204.1 13.2 202.4 18.4 201.9 21.5 203 22.9 203.8 22.8 206.1 21.7 207.3 20.6 210 17.5"/></svg></span></p>
+          <p class="field"><span class="field__k">Daily</span><span class="field__v mono">₦1,000</span></p>
+          <p class="field"><span class="field__k">Month</span><span class="field__v mono">SEP 2026</span></p>
+        </div>
+        <ol class="ajo-grid">
+        <li><span class="box is-paid"><span class="box__n">1</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-4deg;--x:5%;--y:6%;--o:0.59" aria-hidden="true"><g filter="url(#ink-s1)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">2</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-10deg;--x:-5%;--y:-2%;--o:0.75" aria-hidden="true"><g filter="url(#ink-s1)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">3</span><svg class="stamp" viewBox="0 0 100 100" style="--r:7deg;--x:1%;--y:-6%;--o:0.76" aria-hidden="true"><g filter="url(#ink-s1)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">4</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-11deg;--x:-1%;--y:2%;--o:0.78" aria-hidden="true"><g filter="url(#ink-s2)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">5</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-4deg;--x:-2%;--y:6%;--o:0.69" aria-hidden="true"><g filter="url(#ink-s3)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">6</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-1deg;--x:1%;--y:4%;--o:0.63" aria-hidden="true"><g filter="url(#ink-s3)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">7</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-15deg;--x:5%;--y:0%;--o:0.88" aria-hidden="true"><g filter="url(#ink-s3)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">8</span><svg class="stamp" viewBox="0 0 100 100" style="--r:3deg;--x:-6%;--y:3%;--o:0.89" aria-hidden="true"><g filter="url(#ink-s2)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">9</span><svg class="stamp" viewBox="0 0 100 100" style="--r:21deg;--x:-3%;--y:0%;--o:0.69" aria-hidden="true"><g filter="url(#ink-s1)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">10</span><svg class="stamp" viewBox="0 0 100 100" style="--r:15deg;--x:4%;--y:-6%;--o:0.63" aria-hidden="true"><g filter="url(#ink-s3)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">11</span><svg class="stamp" viewBox="0 0 100 100" style="--r:12deg;--x:-4%;--y:1%;--o:0.72" aria-hidden="true"><g filter="url(#ink-s1)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">12</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-21deg;--x:5%;--y:6%;--o:0.63" aria-hidden="true"><g filter="url(#ink-s2)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">13</span><svg class="stamp" viewBox="0 0 100 100" style="--r:12deg;--x:2%;--y:1%;--o:0.64" aria-hidden="true"><g filter="url(#ink-s1)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">14</span><svg class="stamp" viewBox="0 0 100 100" style="--r:21deg;--x:5%;--y:6%;--o:0.72" aria-hidden="true"><g filter="url(#ink-s3)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">15</span><svg class="stamp" viewBox="0 0 100 100" style="--r:5deg;--x:5%;--y:-3%;--o:0.56" aria-hidden="true"><g filter="url(#ink-s2)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box is-paid"><span class="box__n">16</span><svg class="stamp" viewBox="0 0 100 100" style="--r:-18deg;--x:-1%;--y:0%;--o:0.74" aria-hidden="true"><g filter="url(#ink-s1)"><use href="#s-paid"/></g></svg></span></li>
+        <li><span class="box"><span class="box__n">17</span></span></li>
+        <li><span class="box"><span class="box__n">18</span></span></li>
+        <li><span class="box"><span class="box__n">19</span></span></li>
+        <li><span class="box"><span class="box__n">20</span></span></li>
+        <li><span class="box"><span class="box__n">21</span></span></li>
+        <li><span class="box"><span class="box__n">22</span></span></li>
+        <li><span class="box"><span class="box__n">23</span></span></li>
+        <li><span class="box"><span class="box__n">24</span></span></li>
+        <li><span class="box"><span class="box__n">25</span></span></li>
+        <li><span class="box"><span class="box__n">26</span></span></li>
+        <li><span class="box"><span class="box__n">27</span></span></li>
+        <li><span class="box"><span class="box__n">28</span></span></li>
+        <li><span class="box"><span class="box__n">29</span></span></li>
+        <li><span class="box"><span class="box__n">30</span></span></li>
+        <li><span class="box"><span class="box__n">31</span></span></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+      </ol>
+        <svg class="creases" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M-2 38 L44 47 L102 31"/><path d="M58 -2 L52 41 L63 102"/><path d="M-2 79 L52 68"/><path d="M18 -2 L30 30"/>
+        </svg>
+      </div>
+    </div>
+    <div class="bigstamp bigstamp--red problem__stamp" data-bigstamp aria-hidden="true">
+      <svg viewBox="0 0 440 156"><g filter="url(#ink-l)" fill="none" stroke="currentColor"><rect x="6" y="6" width="428" height="144" rx="6" stroke-width="7"/><rect x="18" y="18" width="404" height="120" rx="3" stroke-width="2"/><text x="220" y="72" text-anchor="middle" fill="currentColor" stroke="none" font-family="'IBM Plex Mono', ui-monospace, monospace" font-weight="700" font-size="44" letter-spacing="3">COLLECTOR</text><text x="220" y="118" text-anchor="middle" fill="currentColor" stroke="none" font-family="'IBM Plex Mono', ui-monospace, monospace" font-weight="700" font-size="44" letter-spacing="3">NOT FOUND</text></g></svg>
+    </div>
+    <figcaption class="margin-note mono">Her sixth card. Ticked to day 16.<br>No receipts. No copy. No collector.</figcaption>
+  </figure>
+
+  <div class="problem__story">
+    <p class="dropcap">Every morning the alajo came by her stall, collected <span class="mono">₦1,000</span> and ticked her card. Six months of ticks. <span class="mono">₦180,000</span> of pepper money, put aside for school fees in September.</p>
+    <p>Then one week he didn't come. His phone was off. His stall was locked. Nobody at the market knew where he went.</p>
+    <p>All she had left was a card. And a card is only paper. It tears, it gets wet, it gets lost, and the only other copy of the record was in his head.</p>
+    <p class="problem__turn">Saving was never the problem. <em>Proof</em> was.</p>
+  </div>
+
+  <div class="facts" aria-labelledby="facts-title">
+    <h3 class="facts__title mono" id="facts-title">What the survey says</h3>
+    <div class="fact">
+      <p class="fact__num mono"><span class="roll" data-roll>10.6%</span></p>
+      <p class="fact__text">of formally included Nigerians could raise <span class="mono">₦156,000</span> within 7 days if they had to.</p>
+    </div>
+    <div class="fact">
+      <p class="fact__num mono"><span class="roll" data-roll>30.7%</span></p>
+      <p class="fact__text">of Nigerians are financially healthy. Most people who save have nothing to show for it on paper.</p>
+    </div>
+    <p class="facts__src mono">Source: EFInA A2F 2026</p>
+  </div>
+</section>
+
+<div class="adire-band" aria-hidden="true"><svg width="100%" height="42"><rect width="100%" height="42" fill="url(#adire)" filter="url(#resist)"/></svg></div>
+
+<!-- ============================== 03 HOW IT WORKS ============================== -->
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="how__pin wrap">
+    <div class="how__head">
+      <p class="label"><span class="label__n">03</span> / How it works</p>
+      <h2 class="how__title" id="how-title">From cash in hand to a loan on paper.</h2>
+      <ol class="how__steps mono" aria-label="Steps">
+        <li class="is-active" data-step-ix="0"><span>01</span> Save</li>
+        <li data-step-ix="1"><span>02</span> Secure</li>
+        <li data-step-ix="2"><span>03</span> Borrow</li>
+      </ol>
+    </div>
+
+    <div class="book">
+      <!-- Left page: printed inside cover of the ledger. -->
+      <div class="book__left" aria-hidden="true">
+        <div class="page page--cover">
+          <p class="mono page__meta">Ledger · Card 0412</p>
+          <p class="cover__title">Mama Bisi</p>
+          <p class="mono cover__sub">Kuto Market, Abeokuta<br>Saver since April 2026</p>
+          <p class="cover__note">Turn the page to follow one <span class="mono">₦1,000</span> from her hand to her loan.</p>
+        </div>
+      </div>
+
+      <div class="book__right">
+        <!-- Leaf 1: SAVE -->
+        <article class="leaf" data-leaf="0" aria-labelledby="step1-title">
+          <div class="leaf__face leaf__front page">
+            <p class="mono page__meta"><span>01 / Save</span><span>07:42 · Kuto Market</span></p>
+            <h3 class="page__title" id="step1-title">She pays. He records. Her phone confirms.</h3>
+            <table class="ledger mono">
+              <caption class="sr-only">Contributions recorded this morning</caption>
+              <thead><tr><th scope="col">Saver</th><th scope="col">Paid</th><th scope="col">SMS</th></tr></thead>
+              <tbody>
+                <tr class="is-mark"><td>Mama Bisi</td><td>₦1,000.00</td><td>07:42</td></tr>
+                <tr><td>Iya Tunde</td><td>₦500.00</td><td>07:49</td></tr>
+                <tr><td>Baba Ayo</td><td>₦2,000.00</td><td>08:03</td></tr>
+              </tbody>
+            </table>
+            <p class="page__body">Your alajo types in what you paid. Within a minute, an SMS from <span class="mono">AjoProof</span> lands on your phone. Any phone. No app, no data.</p>
+            <div class="leaf__status mono" aria-hidden="true"><span>Status</span><span class="mini-stamp mini-stamp--blue" data-mini>With collector</span></div>
+          </div>
+          <div class="leaf__face leaf__back page" aria-hidden="true">
+            <p class="mono page__meta"><span>Carbon copy</span><span>23 Oct</span></p>
+            <p class="carbon mono">3 receipts sent before 08:05<br>₦3,500.00 collected<br>0 disputes</p>
+          </div>
+        </article>
+
+        <!-- Leaf 2: SECURE -->
+        <article class="leaf" data-leaf="1" aria-labelledby="step2-title">
+          <div class="leaf__face leaf__front page">
+            <p class="mono page__meta"><span>02 / Secure</span><span>18:10 · Partner deposit</span></p>
+            <h3 class="page__title" id="step2-title">By evening, the cash is in the bank.</h3>
+            <table class="ledger ledger--sum mono">
+              <caption class="sr-only">Today's deposit</caption>
+              <tbody>
+                <tr><th scope="row">Collected today</th><td>₦46,500.00</td></tr>
+                <tr><th scope="row">Deposited</th><td>₦46,500.00</td></tr>
+                <tr><th scope="row">Confirmed by partner</th><td>18:10</td></tr>
+                <tr class="is-total"><th scope="row">Difference</th><td>₦0.00</td></tr>
+              </tbody>
+            </table>
+            <p class="page__body">Every day your alajo deposits what was collected with our licensed partner. Once the partner confirms it, your receipt changes from <em>with collector</em> to <em class="green">secured</em>.</p>
+            <div class="leaf__status mono" aria-hidden="true"><span>Status</span><span class="mini-stamp mini-stamp--green" data-mini>Secured</span></div>
+          </div>
+          <div class="leaf__face leaf__back page" aria-hidden="true">
+            <p class="mono page__meta"><span>Deposit slip</span><span>DEP-1023-0412</span></p>
+            <p class="carbon mono">₦46,500.00 · 41 savers<br>Confirmed 18:10<br><span lang="yo">Owó rẹ wà láìléwu.</span></p>
+          </div>
+        </article>
+
+        <!-- Leaf 3: BORROW -->
+        <article class="leaf" data-leaf="2" aria-labelledby="step3-title">
+          <div class="leaf__face leaf__front page">
+            <p class="mono page__meta"><span>03 / Borrow</span><span>Savings history · 6 months</span></p>
+            <h3 class="page__title" id="step3-title">Six months of stamps is a history a lender can read.</h3>
+            <table class="ledger ledger--history mono">
+              <caption class="sr-only">Mama Bisi's savings history, April to September 2026</caption>
+              <thead><tr><th scope="col">Month</th><th scope="col">Days</th><th scope="col" class="hist__bar-h"><span class="sr-only">Days paid</span></th><th scope="col">Saved</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Apr</th><td>28/30</td><td class="hist__cell" aria-hidden="true"><span class="hist__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td>₦28,000.00</td></tr>
+                <tr><th scope="row">May</th><td>31/31</td><td class="hist__cell" aria-hidden="true"><span class="hist__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td>₦31,000.00</td></tr>
+                <tr><th scope="row">Jun</th><td>29/30</td><td class="hist__cell" aria-hidden="true"><span class="hist__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td>₦29,000.00</td></tr>
+                <tr><th scope="row">Jul</th><td>31/31</td><td class="hist__cell" aria-hidden="true"><span class="hist__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td>₦31,000.00</td></tr>
+                <tr><th scope="row">Aug</th><td>30/31</td><td class="hist__cell" aria-hidden="true"><span class="hist__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td>₦30,000.00</td></tr>
+                <tr><th scope="row">Sep</th><td>30/30</td><td class="hist__cell" aria-hidden="true"><span class="hist__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td>₦30,000.00</td></tr>
+                <tr class="is-total"><th scope="row">Total</th><td>179/183</td><td></td><td>₦179,000.00</td></tr>
+              </tbody>
+            </table>
+            <p class="page__body">After three months, you can share this report with a lender. Only if you say yes. Every line is checked against the bank deposits.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Shared status label (desktop). Stamped WITH COLLECTOR, then restamped SECURED as the pages turn. -->
+      <div class="status" aria-live="polite">
+        <p class="status__k mono">Status of ₦1,000 · Day 23</p>
+        <div class="status__slot">
+          <div class="bigstamp bigstamp--blue status__stamp" data-status="with"><svg viewBox="0 0 400 96" aria-hidden="true"><g filter="url(#ink-l)" fill="none" stroke="currentColor"><rect x="5" y="5" width="390" height="86" rx="5" stroke-width="6"/><text x="200" y="62" text-anchor="middle" fill="currentColor" stroke="none" font-family="'IBM Plex Mono', ui-monospace, monospace" font-weight="700" font-size="38" letter-spacing="3">WITH COLLECTOR</text></g></svg><span class="sr-only">With collector</span></div>
+          <div class="bigstamp bigstamp--green status__stamp" data-status="secured"><svg viewBox="0 0 300 96" aria-hidden="true"><g filter="url(#ink-l)" fill="none" stroke="currentColor"><rect x="5" y="5" width="290" height="86" rx="5" stroke-width="6"/><rect x="15" y="15" width="270" height="66" rx="2" stroke-width="2"/><text x="150" y="62" text-anchor="middle" fill="currentColor" stroke="none" font-family="'IBM Plex Mono', ui-monospace, monospace" font-weight="700" font-size="40" letter-spacing="5">SECURED</text></g></svg><span class="sr-only">Secured</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 04 TRY IT ============================== -->
+<section class="try wrap" id="try" aria-labelledby="try-title">
+  <div class="sec-rule"><p class="label"><span class="label__n">04</span> / Try it</p><p class="sec-rule__aside mono">This is what your alajo sees</p></div>
+
+  <div class="try__left">
+    <h2 class="try__title" id="try-title">Record a payment. Watch the receipt print.</h2>
+    <form class="recorder" id="recorder" novalidate>
+      <div class="field-line">
+        <label for="r-name" class="mono">Saver's name</label>
+        <input id="r-name" name="name" type="text" autocomplete="off" maxlength="22" placeholder="Mama Bisi" required aria-describedby="r-name-err">
+        <p class="err mono" id="r-name-err" hidden></p>
+      </div>
+      <div class="field-line field-line--naira">
+        <label for="r-amt" class="mono">Amount paid today</label>
+        <span class="naira mono" aria-hidden="true">₦</span>
+        <input id="r-amt" name="amount" type="text" inputmode="numeric" autocomplete="off" maxlength="9" placeholder="1,000" required aria-describedby="r-amt-err r-amt-hint">
+        <p class="hint mono" id="r-amt-hint">Between ₦100 and ₦500,000</p>
+        <p class="err mono" id="r-amt-err" hidden></p>
+      </div>
+      <div class="recorder__row">
+        <button class="btn btn--ink" type="submit">Record</button>
+        <button class="sound mono" type="button" id="sound" aria-pressed="false"><span class="sound__dot" aria-hidden="true"></span>Sound <span data-sound-state>off</span></button>
+      </div>
+      <p class="recorder__note mono">Nothing you type leaves this page.</p>
+    </form>
+  </div>
+
+  <div class="try__right">
+    <div class="printer" aria-hidden="true">
+      <div class="printer__body">
+        <span class="mono printer__brand">AjoProof · AP-58</span>
+        <span class="printer__led" data-led></span>
+      </div>
+      <div class="printer__slot"></div>
+    </div>
+    <div class="paper-feed">
+      <div class="receipt" id="receipt" role="status" aria-live="polite" aria-label="Printed receipt">
+        <div class="receipt__lines mono" data-receipt-lines>
+          <p class="r-c r-b">AJOPROOF</p>
+          <p class="r-c">Waiting for a payment</p>
+          <p class="r-rule"></p>
+          <p class="r-c r-dim">Type a name and amount,<br>then press Record.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 05 WHO IT'S FOR ============================== -->
+<section class="who wrap" id="who" aria-labelledby="who-title">
+  <div class="sec-rule"><p class="label"><span class="label__n">05</span> / Who it's for</p><p class="sec-rule__aside mono">One record, three readers</p></div>
+  <h2 class="who__title" id="who-title">One record. Three people who need it.</h2>
+
+  <!-- CONFIRM PRICING before launch: the "What it costs" row below. -->
+  <table class="book-table">
+    <caption class="sr-only">What AjoProof does for collectors, savers and lenders</caption>
+    <thead>
+      <tr>
+        <td class="bt__corner mono" aria-hidden="true">Fol. 05</td>
+        <th scope="col"><span class="mono">A /</span> Collectors</th>
+        <th scope="col"><span class="mono">B /</span> Savers</th>
+        <th scope="col"><span class="mono">C /</span> Lenders</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">What you get</th>
+        <td data-col="Collectors">An app that keeps your whole book: every saver, every payment, every deposit. Receipts go out by themselves.</td>
+        <td data-col="Savers">An SMS for every naira you pay, on any phone. A card that can't get lost, wet or "forgotten".</td>
+        <td data-col="Lenders">Months of daily savings for people who have no bank statement, checked against real deposits.</td>
+      </tr>
+      <tr>
+        <th scope="row">What it costs</th>
+        <td data-col="Collectors"><span class="mono">₦0</span> to start. A small monthly fee once your book grows. We tell you the naira amount before you pay anything.</td>
+        <td data-col="Savers"><span class="mono">₦0</span>. Receipts are free to you. You pay your alajo the same way you always have.</td>
+        <td data-col="Lenders">A fee per report, agreed with your team. No report is shared without the saver's yes.</td>
+      </tr>
+      <tr>
+        <th scope="row">What changes</th>
+        <td data-col="Collectors">Savers trust you faster. New ones come from referrals, because now they can see proof.</td>
+        <td data-col="Savers">After three months, your record can help you get a loan for your shop or your children's fees.</td>
+        <td data-col="Lenders">You lend on real cash flow, not guesses. Small loans become worth making.</td>
+      </tr>
+      <tr class="bt__cta">
+        <th scope="row"><span class="sr-only">Get started</span></th>
+        <td><a class="btn btn--ink" data-url="collectorSignup" href="/app/signup?role=collector">Start as a collector</a></td>
+        <td><a class="btn btn--line" data-url="saverSignup" href="/app/signup?role=saver">I save with an alajo</a></td>
+        <td><a class="btn btn--line" data-url="lenders" href="mailto:lenders@ajoproof.ng">Ask for a sample report</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================== 06 TRUST ============================== -->
+<!-- LEGAL REVIEW: have these clauses checked before launch. [Partner name] must be filled in. -->
+<section class="terms wrap" id="terms" aria-labelledby="terms-title">
+  <div class="terms__side">
+    <p class="label"><span class="label__n">06</span> / Trust</p>
+    <h2 class="terms__title" id="terms-title">The back of the receipt.</h2>
+    <p class="terms__intro">Every promise we make, in the small print you can actually read.</p>
+  </div>
+  <div class="terms__sheet">
+    <p class="terms__head mono"><span>Conditions of this receipt</span><span>Form AP-6</span></p>
+    <ol class="clauses mono">
+      <li><b>Your money is not kept by AjoProof.</b> Each day's cash is deposited with a <mark>licensed partner</mark> ([Partner name], licensed by [regulator]). AjoProof never holds savers' funds.</li>
+      <li>Every contribution your alajo records sends you an <mark>SMS receipt</mark> from sender ID "AjoProof", usually within one minute.</li>
+      <li>A contribution is shown as <mark class="green">Secured</mark> only after the partner confirms the deposit. Until then it is shown as <mark>With collector</mark>, so you always know where your money is.</li>
+      <li>Your record belongs to <mark>you</mark>. If your collector stops working, your history stays, and so does your right to the money that was deposited.</li>
+      <li>We share your savings history with a lender <mark>only when you say yes</mark>, one lender at a time. You can say no and nothing changes.</li>
+      <li>If an SMS doesn't arrive or an amount looks wrong, call <mark>0803 XXX XXXX</mark> (CHANGE: support line). We check it against the bank record and reply within one working day.</li>
+    </ol>
+    <p class="terms__yo"><span class="mono" lang="yo">Owó rẹ wà láìléwu.</span> <span class="terms__yo-en">Your money is safe.</span></p>
+  </div>
+</section>
+
+<div class="adire-band" aria-hidden="true"><svg width="100%" height="42"><rect width="100%" height="42" fill="url(#adire)" filter="url(#resist)"/></svg></div>
+
+<!-- ============================== 07 VOICES ============================== -->
+<!-- PLACEHOLDERS ONLY. Replace with real, recorded quotes and real photos taken with permission.
+     Photo: replace the .photo__frame div with
+     <img src="photos/kuto-trader.jpg" alt="Describe the person and place" width="800" height="1000" loading="lazy" decoding="async">
+     Quote: replace the text inside <blockquote><p>…</p></blockquote> and the <figcaption>. -->
+<section class="voices wrap" id="voices" aria-labelledby="voices-title">
+  <div class="sec-rule"><p class="label"><span class="label__n">07</span> / Voices</p><p class="sec-rule__aside mono">Kuto · Itoku · Lafenwa</p></div>
+  <h2 class="voices__title" id="voices-title">In their words, not ours.</h2>
+  <p class="voices__note">We are recording conversations with traders and collectors in Abeokuta. Their words go here, exactly as said, with their permission.</p>
+
+  <figure class="voice voice--a">
+    <div class="photo"><div class="photo__frame" role="img" aria-label="Photo placeholder: trader at Kuto market"><span class="mono">[Photo: trader at Kuto market]</span></div><span class="photo__edge mono" aria-hidden="true">KUTO 24A</span></div>
+    <blockquote><p>[Real quote from interview, name, market]</p></blockquote>
+    <figcaption class="mono">[Name] · [Trade] · Kuto Market</figcaption>
+  </figure>
+
+  <figure class="voice voice--b">
+    <div class="photo"><div class="photo__frame" role="img" aria-label="Photo placeholder: alajo on his morning round at Itoku"><span class="mono">[Photo: alajo on his morning round, Itoku]</span></div><span class="photo__edge mono" aria-hidden="true">ITOKU 07</span></div>
+    <blockquote><p>[Real quote from interview, name, market]</p></blockquote>
+    <figcaption class="mono">[Name] · Alajo · Itoku Market</figcaption>
+  </figure>
+</section>
+
+<!-- ============================== 08 FAQ ============================== -->
+<section class="faq wrap" id="faq" aria-labelledby="faq-title">
+  <div class="notice">
+    <div class="notice__head">
+      <p class="mono">Notice · Ìkéde</p>
+      <p class="label"><span class="label__n">08</span> / Questions</p>
+    </div>
+    <h2 class="notice__title" id="faq-title">What people ask us at the market.</h2>
+    <div class="qa">
+      <details>
+        <summary>Do I need a smartphone?</summary>
+        <p>No. Savers get receipts by SMS on any phone, even a small Nokia. Only your alajo uses the AjoProof app.</p>
+      </details>
+      <details>
+        <summary>Who is holding my money?</summary>
+        <p>A licensed partner, not AjoProof and not the collector's pocket. Your alajo deposits each day's cash, and your receipt changes to <em class="green">Secured</em> once the deposit is confirmed.</p>
+      </details>
+      <details>
+        <summary>What if my collector stops coming?</summary>
+        <p>Your record doesn't go with them. You can see every payment you made and how much was deposited, and we help you claim what is yours.</p>
+      </details>
+      <details>
+        <summary>How does the loan part work?</summary>
+        <p>After about three months of saving, you can ask for your savings history report and share it with a lender. They see how regularly you saved and how much. They never see it without your yes.</p>
+      </details>
+      <details>
+        <summary>I'm an alajo. Do I change how I collect?</summary>
+        <p>You still go round the market, still collect cash, still keep your people. The difference is that you type each payment into your phone instead of a notebook, and you bank by evening.</p>
+      </details>
+      <!-- CONFIRM: Yoruba receipts are available at launch -->
+      <details>
+        <summary>Does it work in Yoruba?</summary>
+        <p>Yes. Receipts can come in Yoruba or English. <span class="mono" lang="yo">Bẹ́ẹ̀ni, a ń sọ Yorùbá.</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 09 FINAL CTA ============================== -->
+<section class="final" aria-labelledby="final-title">
+  <div class="adire-band adire-band--edge" aria-hidden="true"><svg width="100%" height="42"><rect width="100%" height="42" fill="url(#adire)" filter="url(#resist)"/></svg></div>
+  <div class="final__inner wrap">
+    <div class="final__copy">
+      <p class="label label--paper"><span class="label__n">09</span> / Start</p>
+      <h2 class="final__title" id="final-title">Start a card that can't disappear.</h2>
+      <p class="final__lede">Thirty-one empty boxes. Every one you fill is receipted, banked and yours to keep.</p>
+      <div class="ctas">
+        <a class="btn btn--paper" data-url="collectorSignup" href="/app/signup?role=collector">Start as a collector</a>
+        <a class="btn btn--line-paper" data-url="saverSignup" href="/app/signup?role=saver">I save with an alajo</a>
+      </div>
+    </div>
+    <div class="final__card">
+      <div class="ajo-card ajo-card--fresh" aria-hidden="true">
+        <div class="ajo-card__head">
+          <p class="ajo-card__issuer">Your name here</p>
+          <p class="ajo-card__where mono">Abeokuta · Ogun State</p>
+          <p class="ajo-card__no mono">No. <b>0001</b></p>
+        </div>
+        <div class="ajo-card__fields">
+          <p class="field field--name"><span class="field__k">Name</span><span class="field__v"></span></p>
+          <p class="field"><span class="field__k">Daily</span><span class="field__v mono">₦</span></p>
+          <p class="field"><span class="field__k">Month</span><span class="field__v mono">&nbsp;</span></p>
+        </div>
+        <ol class="ajo-grid">
+        <li><span class="box"><span class="box__n">1</span></span></li>
+        <li><span class="box"><span class="box__n">2</span></span></li>
+        <li><span class="box"><span class="box__n">3</span></span></li>
+        <li><span class="box"><span class="box__n">4</span></span></li>
+        <li><span class="box"><span class="box__n">5</span></span></li>
+        <li><span class="box"><span class="box__n">6</span></span></li>
+        <li><span class="box"><span class="box__n">7</span></span></li>
+        <li><span class="box"><span class="box__n">8</span></span></li>
+        <li><span class="box"><span class="box__n">9</span></span></li>
+        <li><span class="box"><span class="box__n">10</span></span></li>
+        <li><span class="box"><span class="box__n">11</span></span></li>
+        <li><span class="box"><span class="box__n">12</span></span></li>
+        <li><span class="box"><span class="box__n">13</span></span></li>
+        <li><span class="box"><span class="box__n">14</span></span></li>
+        <li><span class="box"><span class="box__n">15</span></span></li>
+        <li><span class="box"><span class="box__n">16</span></span></li>
+        <li><span class="box"><span class="box__n">17</span></span></li>
+        <li><span class="box"><span class="box__n">18</span></span></li>
+        <li><span class="box"><span class="box__n">19</span></span></li>
+        <li><span class="box"><span class="box__n">20</span></span></li>
+        <li><span class="box"><span class="box__n">21</span></span></li>
+        <li><span class="box"><span class="box__n">22</span></span></li>
+        <li><span class="box"><span class="box__n">23</span></span></li>
+        <li><span class="box"><span class="box__n">24</span></span></li>
+        <li><span class="box"><span class="box__n">25</span></span></li>
+        <li><span class="box"><span class="box__n">26</span></span></li>
+        <li><span class="box"><span class="box__n">27</span></span></li>
+        <li><span class="box"><span class="box__n">28</span></span></li>
+        <li><span class="box"><span class="box__n">29</span></span></li>
+        <li><span class="box"><span class="box__n">30</span></span></li>
+        <li><span class="box"><span class="box__n">31</span></span></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+        <li class="box box--void" aria-hidden="true"></li>
+      </ol>
+        <div class="ajo-card__foot"><p><span class="field__k">Collector's sign</span></p><p class="mono">Receipted by SMS · AjoProof</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="adire-band adire-band--edge" aria-hidden="true"><svg width="100%" height="42"><rect width="100%" height="42" fill="url(#adire)" filter="url(#resist)"/></svg></div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner wrap">
+    <p class="footer__made">Made in Abeokuta</p>
+    <div class="footer__cols mono">
+      <p>AjoProof<br>Kuto, Abeokuta<br>Ogun State, Nigeria</p>
+      <p>7.15° N, 3.35° E<br>Home of Adire, Itoku</p>
+      <!-- CHANGE: contact details and legal links -->
+      <p><a href="mailto:hello@ajoproof.ng">hello@ajoproof.ng</a><br><a href="tel:+234803XXXXXXX">0803 XXX XXXX</a></p>
+      <p><a href="/privacy">Privacy</a><br><a href="/terms">Terms</a><br><a data-url="login" href="/app/login">Log in</a></p>
+    </div>
+    <p class="footer__fine mono">© 2026 AjoProof. Savers' funds are held by [Partner name], a licensed partner. AjoProof is not a bank.</p>
+  </div>
+  <div class="footer__band" aria-hidden="true"><svg width="100%" height="84"><rect width="100%" height="84" fill="url(#adire)" filter="url(#resist)"/></svg></div>
+</footer>
+</body>
+</html>
