@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* =====================================================================
+   COLOURS + TYPE: the AjoProof design tokens. Change the palette here.
+   Used as Tailwind classes: bg-forest-950, text-lime, text-mist, ...
+   ===================================================================== */
+@theme {
+  --color-forest-950: #07140D; /* primary background */
+  --color-forest-900: #0C2013; /* secondary background */
+  --color-forest-800: #102D19; /* deep green */
+  --color-lime: #A7F58A;       /* primary accent */
+  --color-lime-soft: #C7FFB1;  /* secondary accent */
+  --color-mist: #B7C2B8;       /* secondary text on dark */
+  --color-paper: #F2F6EF;      /* light sections */
+  --color-moss: #44584A;       /* secondary text on light */
+
+  --font-sans: "Jakarta Ext", var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-rise: rise 0.9s var(--ease-out-soft) both;
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* Headline: movement only, so it is painted (and counted for LCP) immediately. */
+  --animate-slide: slide 0.9s var(--ease-out-soft) both;
+  @keyframes slide {
+    from { transform: translateY(22px); }
+    to { transform: translateY(0); }
+  }
+}
+
+/* Extended Latin (incl. the naira sign ₦), fetched only when such characters appear on the page. */
+@font-face {
+  font-family: "Jakarta Ext";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--color-forest-950);
+    color: #fff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  /* Anchored sections land below the fixed navigation. */
+  section[id] { scroll-margin-top: 88px; }
+  :focus-visible { outline: 2px solid var(--color-lime); outline-offset: 3px; border-radius: 8px; }
+  ::selection { background: var(--color-lime); color: var(--color-forest-950); }
+}
+
+@layer components {
+  /* Subtle glass: low-contrast fill, hairline border, blur only where it's cheap. */
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    backdrop-filter: blur(16px) saturate(120%);
+  }
+  .glass-strong {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  }
+  .text-proof {
+    background: linear-gradient(100deg, var(--color-lime-soft) 10%, var(--color-lime) 55%, #8BE36C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .num { font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+}
+
+/* Floating cards: CSS on the compositor, not JavaScript. Tune per element with --amp, --dur, --delay. */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(calc(var(--amp, 8px) * -1)); }
+}
+.float { animation: float var(--dur, 6s) ease-in-out var(--delay, 0s) infinite; will-change: transform; }
+
+/* Ajo card stamps land one after another (delay set per box). */
+@keyframes stamp-in {
+  0% { opacity: 0; transform: scale(1.4) rotate(-9deg); }
+  60% { opacity: 1; transform: scale(0.94) rotate(1deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+.stamp-anim { animation: stamp-in 0.42s cubic-bezier(0.3, 1.4, 0.6, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .float, .stamp-anim { animation: none !important; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-delay: 0s !important; transition-duration: 0.001ms !important; }
+}
