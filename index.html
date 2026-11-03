@@ -34,6 +34,10 @@
      uncomment the Satoshi @font-face in styles.css and delete the two Fontshare lines below. -->
 <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<!-- PHOTOS are linked from Wikimedia Commons (CC BY-SA 4.0, credited in the footer).
+     For production, download them into /photos and point the src/srcset there: faster and no third-party dependency. -->
+<link rel="preconnect" href="https://commons.wikimedia.org">
+<link rel="preconnect" href="https://upload.wikimedia.org">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;display=swap"></noscript>
@@ -159,7 +163,7 @@
 
 <!-- ============================== 01 HERO ============================== -->
 <section class="hero wrap" aria-labelledby="hero-title">
-  <p class="label hero__label"><span class="label__n">01</span> / E kaabo</p>
+  <p class="label hero__label"><span class="label__n">01</span> / E kaabo · <span lang="yo">Ẹ káàbọ̀</span></p>
 
   <h1 class="hero__title" id="hero-title">Your ajo, <span class="hero__break">with <span class="proof">proof<svg class="proof__line" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M5 17.5C48 11 112 8.5 176 10.5c43 1.4 84 4.6 117-2.6"/><path pathLength="1" d="M38 24c62-6 140-7.4 214-3.4"/></svg></span>.</span></h1>
 
@@ -172,8 +176,16 @@
     <p class="hero__fine mono">No smartphone needed · Funds held by a licensed partner</p>
   </div>
 
+  <p class="markets mono" aria-label="Built for the markets of Abeokuta: Kuto, Itoku, Lafenwa, Omida, Sapon, Iberekodo">
+    <span>Built for</span> Kuto <i>·</i> Itoku <i>·</i> Lafenwa <i>·</i> Omida <i>·</i> Sapon <i>·</i> Iberekodo
+  </p>
+
   <div class="hero__stage">
-    <p class="hero__hint mono" id="card-hint">Tap an empty box to stamp it</p>
+    <!-- PHOTO: Itoku market. Swap for your own Kuto market photo when you have it. -->
+    <figure class="print hero__photo">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itoku_market_block,_Abeokuta.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Itoku_market_block,_Abeokuta.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Itoku_market_block,_Abeokuta.jpg?width=960 960w" sizes="(min-width: 960px) 44vw, 92vw" width="1000" height="667" alt="Itoku market block in Abeokuta, Ogun State" loading="eager" decoding="async" fetchpriority="high">
+      <figcaption class="print__cap mono"><span>Itoku market, Abeokuta</span><span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Itoku_market_block,_Abeokuta.jpg">Eukoha</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></figcaption>
+    </figure>
     <!-- The living ajo card. Days 1–23 stamp on load; 24–31 are left for the visitor. -->
     <div class="ajo-card ajo-card--hero" data-card="hero" role="group" aria-label="Ajo card for Mama Bisi, Kuto Market, October 2026" aria-describedby="card-hint">
       <div class="ajo-card__head">
@@ -240,13 +252,13 @@
       </div>
     </div>
 
-    <p class="margin-note margin-note--hero mono" aria-hidden="true">₦1,000 × 31 DAYS<br>= ₦31,000.00</p>
+    <p class="hero__hint mono" id="card-hint">Tap an empty box to stamp it</p>
   </div>
 </section>
 
 <!-- ============================== 02 THE PROBLEM ============================== -->
 <section class="problem wrap" id="problem" aria-labelledby="problem-title">
-  <div class="sec-rule"><p class="label"><span class="label__n">02</span> / The problem</p><p class="sec-rule__aside mono">Lafenwa · September 2026</p></div>
+  <div class="sec-rule"><p class="label"><span class="label__n">02</span> / The problem · <span lang="yo">Ìṣòro</span></p><p class="sec-rule__aside mono">Lafenwa · September 2026</p></div>
 
   <h2 class="problem__title" id="problem-title">She paid <span class="mono num">₦1,000</span> every day for six months. Then the collector vanished.</h2>
 
@@ -318,6 +330,13 @@
     <p class="problem__turn">Saving was never the problem. <em>Proof</em> was.</p>
   </div>
 
+  <!-- PHOTO: pepper seller. The person pictured is not an AjoProof user and is not the woman in the story. -->
+  <figure class="print problem__photo">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Woman_selling_pepper_at_ipata_market.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Woman_selling_pepper_at_ipata_market.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Woman_selling_pepper_at_ipata_market.jpg?width=960 960w" sizes="(min-width: 960px) 58vw, 92vw" width="1200" height="800" alt="A woman selling fresh peppers at her stall in Ipata market, Nigeria" loading="lazy" decoding="async">
+    <figcaption class="print__cap mono"><span>Pepper seller, Ipata market</span><span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Woman_selling_pepper_at_ipata_market.jpg">BJ 77</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></figcaption>
+  </figure>
+  <p class="problem__photo-note">Market money moves as cash, from hand to hand, every single day. Most of it leaves no record anyone else can check.</p>
+
   <div class="facts" aria-labelledby="facts-title">
     <h3 class="facts__title mono" id="facts-title">What the survey says</h3>
     <div class="fact">
@@ -338,7 +357,7 @@
 <section class="how" id="how" aria-labelledby="how-title">
   <div class="how__pin wrap">
     <div class="how__head">
-      <p class="label"><span class="label__n">03</span> / How it works</p>
+      <p class="label"><span class="label__n">03</span> / How it works · <span lang="yo">Bí ó ṣe ń ṣiṣẹ́</span></p>
       <h2 class="how__title" id="how-title">From cash in hand to a loan on paper.</h2>
       <ol class="how__steps mono" aria-label="Steps">
         <li class="is-active" data-step-ix="0"><span>01</span> Save</li>
@@ -442,7 +461,7 @@
 
 <!-- ============================== 04 TRY IT ============================== -->
 <section class="try wrap" id="try" aria-labelledby="try-title">
-  <div class="sec-rule"><p class="label"><span class="label__n">04</span> / Try it</p><p class="sec-rule__aside mono">This is what your alajo sees</p></div>
+  <div class="sec-rule"><p class="label"><span class="label__n">04</span> / Try it · <span lang="yo">Gbìyànjú rẹ̀</span></p><p class="sec-rule__aside mono">This is what your alajo sees</p></div>
 
   <div class="try__left">
     <h2 class="try__title" id="try-title">Record a payment. Watch the receipt print.</h2>
@@ -490,7 +509,7 @@
 
 <!-- ============================== 05 WHO IT'S FOR ============================== -->
 <section class="who wrap" id="who" aria-labelledby="who-title">
-  <div class="sec-rule"><p class="label"><span class="label__n">05</span> / Who it's for</p><p class="sec-rule__aside mono">One record, three readers</p></div>
+  <div class="sec-rule"><p class="label"><span class="label__n">05</span> / Who it's for · <span lang="yo">Fún ta ni</span></p><p class="sec-rule__aside mono">One record, three readers</p></div>
   <h2 class="who__title" id="who-title">One record. Three people who need it.</h2>
 
   <!-- CONFIRM PRICING before launch: the "What it costs" row below. -->
@@ -534,10 +553,16 @@
 </section>
 
 <!-- ============================== 06 TRUST ============================== -->
+<!-- PHOTO band: adire cloth from Abeokuta -->
+<figure class="band-photo" aria-labelledby="band-adire-cap">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Stack_of_Adire_,_a_local_Fabric_from_Abeoukuta.JPG?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Stack_of_Adire_,_a_local_Fabric_from_Abeoukuta.JPG?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Stack_of_Adire_,_a_local_Fabric_from_Abeoukuta.JPG?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Stack_of_Adire_,_a_local_Fabric_from_Abeoukuta.JPG?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Stack_of_Adire_,_a_local_Fabric_from_Abeoukuta.JPG?width=1920 1920w" sizes="100vw" width="3872" height="2592" alt="A stack of folded adire cloth, indigo-dyed fabric from Abeokuta" loading="lazy" decoding="async">
+  <figcaption class="band-photo__cap wrap mono" id="band-adire-cap"><span>Adire, the indigo cloth of Abeokuta. Dyed by hand at Itoku for generations.</span><span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Stack_of_Adire_,_a_local_Fabric_from_Abeoukuta.JPG">Olaniyan Olushola</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></figcaption>
+</figure>
+
 <!-- LEGAL REVIEW: have these clauses checked before launch. [Partner name] must be filled in. -->
 <section class="terms wrap" id="terms" aria-labelledby="terms-title">
   <div class="terms__side">
-    <p class="label"><span class="label__n">06</span> / Trust</p>
+    <p class="label"><span class="label__n">06</span> / Trust · <span lang="yo">Ìgbẹ́kẹ̀lé</span></p>
     <h2 class="terms__title" id="terms-title">The back of the receipt.</h2>
     <p class="terms__intro">Every promise we make, in the small print you can actually read.</p>
   </div>
@@ -558,23 +583,24 @@
 <div class="adire-band" aria-hidden="true"><svg width="100%" height="42"><rect width="100%" height="42" fill="url(#adire)" filter="url(#resist)"/></svg></div>
 
 <!-- ============================== 07 VOICES ============================== -->
-<!-- PLACEHOLDERS ONLY. Replace with real, recorded quotes and real photos taken with permission.
-     Photo: replace the .photo__frame div with
+<!-- QUOTES ARE PLACEHOLDERS. Replace with real, recorded quotes.
+     PHOTOS show the places (Wikimedia Commons, credited). When you have portraits of the people you
+     interviewed (taken with permission), swap the <img> for
      <img src="photos/kuto-trader.jpg" alt="Describe the person and place" width="800" height="1000" loading="lazy" decoding="async">
      Quote: replace the text inside <blockquote><p>…</p></blockquote> and the <figcaption>. -->
 <section class="voices wrap" id="voices" aria-labelledby="voices-title">
-  <div class="sec-rule"><p class="label"><span class="label__n">07</span> / Voices</p><p class="sec-rule__aside mono">Kuto · Itoku · Lafenwa</p></div>
+  <div class="sec-rule"><p class="label"><span class="label__n">07</span> / Voices · <span lang="yo">Ohùn</span></p><p class="sec-rule__aside mono">Kuto · Itoku · Lafenwa</p></div>
   <h2 class="voices__title" id="voices-title">In their words, not ours.</h2>
   <p class="voices__note">We are recording conversations with traders and collectors in Abeokuta. Their words go here, exactly as said, with their permission.</p>
 
   <figure class="voice voice--a">
-    <div class="photo"><div class="photo__frame" role="img" aria-label="Photo placeholder: trader at Kuto market"><span class="mono">[Photo: trader at Kuto market]</span></div><span class="photo__edge mono" aria-hidden="true">KUTO 24A</span></div>
+    <div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Adire_Mall,_Itoku_Abeokuta_(5).jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Adire_Mall,_Itoku_Abeokuta_(5).jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Adire_Mall,_Itoku_Abeokuta_(5).jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Adire_Mall,_Itoku_Abeokuta_(5).jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Adire_Mall,_Itoku_Abeokuta_(5).jpg?width=1920 1920w" sizes="(min-width: 960px) 30vw, 92vw" width="3000" height="4496" alt="A statue at Itoku market, Abeokuta, showing the process of making adire cloth" loading="lazy" decoding="async"><span class="photo__edge mono">ITOKU · <span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Adire_Mall,_Itoku_Abeokuta_(5).jpg">Solanke Lukman Oluwaseun</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></span></div>
     <blockquote><p>[Real quote from interview, name, market]</p></blockquote>
     <figcaption class="mono">[Name] · [Trade] · Kuto Market</figcaption>
   </figure>
 
   <figure class="voice voice--b">
-    <div class="photo"><div class="photo__frame" role="img" aria-label="Photo placeholder: alajo on his morning round at Itoku"><span class="mono">[Photo: alajo on his morning round, Itoku]</span></div><span class="photo__edge mono" aria-hidden="true">ITOKU 07</span></div>
+    <div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lafenwa_road_Abeokuta,_Ogun_state.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Lafenwa_road_Abeokuta,_Ogun_state.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Lafenwa_road_Abeokuta,_Ogun_state.jpg?width=960 960w" sizes="(min-width: 960px) 22vw, 92vw" width="1200" height="800" alt="Lafenwa road in Abeokuta, Ogun State" loading="lazy" decoding="async"><span class="photo__edge mono">LAFENWA · <span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Lafenwa_road_Abeokuta,_Ogun_state.jpg">Eukoha</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></span></div>
     <blockquote><p>[Real quote from interview, name, market]</p></blockquote>
     <figcaption class="mono">[Name] · Alajo · Itoku Market</figcaption>
   </figure>
@@ -585,7 +611,7 @@
   <div class="notice">
     <div class="notice__head">
       <p class="mono">Notice · Ìkéde</p>
-      <p class="label"><span class="label__n">08</span> / Questions</p>
+      <p class="label"><span class="label__n">08</span> / Questions · <span lang="yo">Ìbéèrè</span></p>
     </div>
     <h2 class="notice__title" id="faq-title">What people ask us at the market.</h2>
     <div class="qa">
@@ -623,7 +649,7 @@
   <div class="adire-band adire-band--edge" aria-hidden="true"><svg width="100%" height="42"><rect width="100%" height="42" fill="url(#adire)" filter="url(#resist)"/></svg></div>
   <div class="final__inner wrap">
     <div class="final__copy">
-      <p class="label label--paper"><span class="label__n">09</span> / Start</p>
+      <p class="label label--paper"><span class="label__n">09</span> / Start · <span lang="yo">Bẹ̀rẹ̀</span></p>
       <h2 class="final__title" id="final-title">Start a card that can't disappear.</h2>
       <p class="final__lede">Thirty-one empty boxes. Every one you fill is receipted, banked and yours to keep.</p>
       <div class="ctas">
@@ -691,6 +717,10 @@
 
 <footer class="footer">
   <div class="footer__inner wrap">
+    <figure class="footer__photo">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Olumo_Rock,_Abeokuta.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Olumo_Rock,_Abeokuta.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Olumo_Rock,_Abeokuta.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Olumo_Rock,_Abeokuta.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Olumo_Rock,_Abeokuta.jpg?width=1920 1920w" sizes="(min-width: 1400px) 1304px, 92vw" width="9805" height="3872" alt="Olumo Rock rising above Abeokuta" loading="lazy" decoding="async">
+      <figcaption class="print__cap mono"><span>Olumo Rock, Abeokuta</span><span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Olumo_Rock,_Abeokuta.jpg">Adedayo Adesilola</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></figcaption>
+    </figure>
     <p class="footer__made">Made in Abeokuta</p>
     <div class="footer__cols mono">
       <p>AjoProof<br>Kuto, Abeokuta<br>Ogun State, Nigeria</p>
@@ -698,6 +728,12 @@
       <!-- CHANGE: contact details and legal links -->
       <p><a href="mailto:hello@ajoproof.ng">hello@ajoproof.ng</a><br><a href="tel:+234803XXXXXXX">0803 XXX XXXX</a></p>
       <p><a href="/privacy">Privacy</a><br><a href="/terms">Terms</a><br><a data-url="login" href="/app/login">Log in</a></p>
+    </div>
+    <!-- PHOTO CREDITS: required by CC BY-SA 4.0. Keep this list in sync with the photos you use. -->
+    <div class="credits mono">
+      <p class="credits__k">Photo credits</p>
+      <ul><li><a href="https://commons.wikimedia.org/wiki/File:Itoku_market_block,_Abeokuta.jpg">Itoku market block, Abeokuta</a> by Eukoha, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</li><li><a href="https://commons.wikimedia.org/wiki/File:Woman_selling_pepper_at_ipata_market.jpg">Woman selling pepper at Ipata market</a> by BJ 77, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</li><li><a href="https://commons.wikimedia.org/wiki/File:Stack_of_Adire_,_a_local_Fabric_from_Abeoukuta.JPG">Stack of Adire, a local fabric from Abeokuta</a> by Olaniyan Olushola, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</li><li><a href="https://commons.wikimedia.org/wiki/File:Adire_Mall,_Itoku_Abeokuta_(5).jpg">Adire Mall, Itoku, Abeokuta</a> by Solanke Lukman Oluwaseun, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</li><li><a href="https://commons.wikimedia.org/wiki/File:Lafenwa_road_Abeokuta,_Ogun_state.jpg">Lafenwa road, Abeokuta</a> by Eukoha, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</li><li><a href="https://commons.wikimedia.org/wiki/File:Olumo_Rock,_Abeokuta.jpg">Olumo Rock, Abeokuta</a> by Adedayo Adesilola, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</li></ul>
+      <p class="credits__note">People pictured are not AjoProof users and have not endorsed it.</p>
     </div>
     <p class="footer__fine mono">© 2026 AjoProof. Savers' funds are held by [Partner name], a licensed partner. AjoProof is not a bank.</p>
   </div>
